@@ -10,3 +10,7 @@ __pycache__/
 .env
 *.err
 *.out
+Stage_1/Running_models/chemCPA/
+Stage_1/Running_models/PRnet/
+Stage_1/Running_models/TranSiGen/
+
