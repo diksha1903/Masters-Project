@@ -1,0 +1,12 @@
+logs/
+*.ckpt
+*.pt
+*.pth
+*.h5
+*.csv
+*.npy
+*.npz
+__pycache__/
+.env
+*.err
+*.out

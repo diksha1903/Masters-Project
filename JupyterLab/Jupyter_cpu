@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH -J JupyterServer
+#SBATCH -t 4:00:00
+#SBATCH -n 1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=32G
+#SBATCH --partition=cpu
+#SBATCH --output=./slurm_out/%j.out
+
+source $HOME/miniconda3/etc/profile.d/conda.sh
+conda activate project
+
+WORKDIR=/scratch/grp/msc_appbio/containersPipelines/k25111577/Masters_Project
+cd $WORKDIR
+
+jupyter lab \
+  --ip=0.0.0.0 \
+  --port=8888 \
+  --no-browser \
+  --notebook-dir=$WORKDIR
